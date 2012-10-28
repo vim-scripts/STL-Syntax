@@ -55,10 +55,6 @@ syntax keyword cppSTLexception range_error
 syntax keyword cppSTLexception runtime_error
 syntax keyword cppSTLexception underflow_error
 syntax keyword cppSTLfunction abort
-syntax keyword cppSTLfunction va_start
-syntax keyword cppSTLfunction va_arg
-syntax keyword cppSTLfunction va_copy
-syntax keyword cppSTLfunction va_end
 syntax keyword cppSTLfunction abs
 syntax keyword cppSTLfunction accumulate
 syntax keyword cppSTLfunction acos
@@ -72,7 +68,6 @@ syntax keyword cppSTLfunctional bit_and
 syntax keyword cppSTLfunctional bit_not
 syntax keyword cppSTLfunctional bit_or
 syntax keyword cppSTLfunctional divides
-syntax keyword cppSTLfunctional equal
 syntax keyword cppSTLfunctional equal_to
 syntax keyword cppSTLfunctional greater
 syntax keyword cppSTLfunctional greater_equal
@@ -148,6 +143,7 @@ syntax keyword cppSTLfunction empty
 syntax keyword cppSTLfunction end
 syntax keyword cppSTLfunction eof
 syntax keyword cppSTLfunction epsilon
+syntax keyword cppSTLfunction equal
 syntax keyword cppSTLfunction equal_range
 syntax keyword cppSTLfunction erase
 syntax keyword cppSTLfunction exit
@@ -425,7 +421,11 @@ syntax keyword cppSTLfunction unique_copy
 syntax keyword cppSTLfunction unsetf
 syntax keyword cppSTLfunction upper_bound
 syntax keyword cppSTLfunction va_arg
+syntax keyword cppSTLfunction va_arg
+syntax keyword cppSTLfunction va_copy
+syntax keyword cppSTLfunction va_end
 syntax keyword cppSTLfunction value_comp
+syntax keyword cppSTLfunction va_start
 syntax keyword cppSTLfunction vfprintf
 syntax keyword cppSTLfunction vfwprintf
 syntax keyword cppSTLfunction vprintf
@@ -1084,7 +1084,7 @@ if version >= 508 || !exists("did_cpp_syntax_inits")
     command -nargs=+ HiLink hi def link <args>
   endif
   HiLink cppSTLfunction     Function
-  HiLink cppSTLfunctional   Function
+  HiLink cppSTLfunctional   Type
   HiLink cppSTLconstant     Constant
   HiLink cppSTLnamespace    Constant
   HiLink cppSTLtype         Type
