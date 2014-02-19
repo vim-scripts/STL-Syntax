@@ -792,6 +792,12 @@ if !exists("cpp_no_cpp11")
     syntax keyword cppSTLtype pointer_traits
     syntax keyword cppSTLfunction addressof
     syntax keyword cppSTLfunction align
+    syntax keyword cppSTLfunction make_shared
+    syntax keyword cppSTLfunction allocate_shared
+    syntax keyword cppSTLfunction static_pointer_cast
+    syntax keyword cppSTLfunction dynamic_pointer_cast
+    syntax keyword cppSTLfunction const_pointer_cast
+    syntax keyword cppSTLfunction get_deleter
 
     " function object
     syntax keyword cppSTLfunction bind
@@ -1207,6 +1213,13 @@ if !exists("cpp_no_cpp11")
     syntax keyword cppSTLfunction wcstoimax
     syntax keyword cppSTLfunction wcstoumax
 
+    syntax keyword cppSTLtype nanoseconds
+    syntax keyword cppSTLtype microseconds
+    syntax keyword cppSTLtype milliseconds
+    syntax keyword cppSTLtype seconds
+    syntax keyword cppSTLtype minutes
+    syntax keyword cppSTLtype hours
+
 endif " C++11
 
 if !exists("cpp_no_cpp14")
@@ -1223,6 +1236,9 @@ if !exists("cpp_no_cpp14")
     "thread
     syntax keyword cppSTLtype shared_mutex
     syntax keyword cppSTLtype shared_lock
+
+    "memory
+    syntax keyword cppSTLfunction make_unique
 endif " C++14
 
 " Default highlighting
