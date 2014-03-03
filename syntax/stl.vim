@@ -794,9 +794,9 @@ if !exists("cpp_no_cpp11")
     syntax keyword cppSTLfunction align
     syntax keyword cppSTLfunction make_shared
     syntax keyword cppSTLfunction allocate_shared
-    syntax keyword cppSTLfunction static_pointer_cast
-    syntax keyword cppSTLfunction dynamic_pointer_cast
-    syntax keyword cppSTLfunction const_pointer_cast
+    syntax keyword cppSTLcast static_pointer_cast
+    syntax keyword cppSTLcast dynamic_pointer_cast
+    syntax keyword cppSTLcast const_pointer_cast
     syntax keyword cppSTLfunction get_deleter
 
     " function object
@@ -831,6 +831,8 @@ if !exists("cpp_no_cpp11")
     syntax keyword cppSTLtype steady_clock
     syntax keyword cppSTLtype high_resolution_clock
     syntax keyword cppSTLtype time_point
+    syntax keyword cppSTLcast duration_cast
+    syntax keyword cppSTLcast time_point_cast
 
     " tuple
     syntax keyword cppSTLtype tuple
@@ -1223,13 +1225,6 @@ if !exists("cpp_no_cpp11")
 endif " C++11
 
 if !exists("cpp_no_cpp14")
-
-    "optional
-    syntax keyword cppSTLtype optional
-    "syntax keyword cppSTLfunction value
-    syntax keyword cppSTLfunction value_or
-    syntax keyword cppSTLfunction make_optional
-
     "dynarray
     syntax keyword cppSTLtype dynarray
 
@@ -1240,6 +1235,17 @@ if !exists("cpp_no_cpp14")
     "memory
     syntax keyword cppSTLfunction make_unique
 endif " C++14
+
+if !exists("cpp_no_boost")
+    "optional is not a part of C++14 anymore
+    syntax keyword cppSTLtype optional
+    "syntax keyword cppSTLfunction value
+    syntax keyword cppSTLfunction value_or
+    syntax keyword cppSTLfunction make_optional
+
+    syntax keyword cppSTLnamespace boost
+    syntax keyword cppSTLcast lexical_cast
+endif " Boost
 
 " Default highlighting
 if version >= 508 || !exists("did_cpp_syntax_inits")
@@ -1259,5 +1265,6 @@ if version >= 508 || !exists("did_cpp_syntax_inits")
   HiLink cppSTLiterator_tag Type
   HiLink cppSTLenum         Type
   HiLink cppSTLios          Function
+  HiLink cppSTLcast         Statement " be consistent with official syntax
   delcommand HiLink
 endif
