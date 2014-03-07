@@ -12,6 +12,10 @@
 " This list is not complete yet. Your contribution is welcome!
 
 syntax keyword cppSTLconstant badbit
+syntax keyword cppSTLconstant cerr
+syntax keyword cppSTLconstant cin
+syntax keyword cppSTLconstant clog
+syntax keyword cppSTLconstant cout
 syntax keyword cppSTLconstant digits
 syntax keyword cppSTLconstant digits10
 syntax keyword cppSTLconstant eofbit
@@ -40,6 +44,10 @@ syntax keyword cppSTLconstant radix
 syntax keyword cppSTLconstant round_style
 syntax keyword cppSTLconstant tinyness_before
 syntax keyword cppSTLconstant traps
+syntax keyword cppSTLconstant wcerr
+syntax keyword cppSTLconstant wcin
+syntax keyword cppSTLconstant wclog
+syntax keyword cppSTLconstant wcout
 syntax keyword cppSTLexception bad_alloc
 syntax keyword cppSTLexception bad_array_new_length
 syntax keyword cppSTLexception bad_exception
@@ -115,12 +123,9 @@ syntax keyword cppSTLfunction bsearch
 syntax keyword cppSTLfunction calloc
 syntax keyword cppSTLfunction capacity
 syntax keyword cppSTLfunction ceil
-syntax keyword cppSTLfunction cerr
-syntax keyword cppSTLfunction cin
 syntax keyword cppSTLfunction clear
 syntax keyword cppSTLfunction clearerr
 syntax keyword cppSTLfunction clock
-syntax keyword cppSTLfunction clog
 syntax keyword cppSTLfunction close
 syntax keyword cppSTLfunction compare
 syntax keyword cppSTLfunction conj
@@ -131,7 +136,6 @@ syntax keyword cppSTLfunction cos
 syntax keyword cppSTLfunction cosh
 syntax keyword cppSTLfunction count
 syntax keyword cppSTLfunction count_if
-syntax keyword cppSTLfunction cout
 syntax keyword cppSTLfunction c_str
 syntax keyword cppSTLfunction ctime
 syntax keyword cppSTLfunction data
@@ -384,9 +388,9 @@ syntax keyword cppSTLfunction strspn
 syntax keyword cppSTLfunction strstr
 syntax keyword cppSTLfunction strtod
 syntax keyword cppSTLfunction strtof
-syntax keyword cppSTLfunction strtold
 syntax keyword cppSTLfunction strtok
 syntax keyword cppSTLfunction strtol
+syntax keyword cppSTLfunction strtold
 syntax keyword cppSTLfunction strtoll
 syntax keyword cppSTLfunction strtoul
 syntax keyword cppSTLfunction strxfrm
@@ -423,7 +427,6 @@ syntax keyword cppSTLfunction unique
 syntax keyword cppSTLfunction unique_copy
 syntax keyword cppSTLfunction unsetf
 syntax keyword cppSTLfunction upper_bound
-syntax keyword cppSTLfunction va_arg
 syntax keyword cppSTLfunction va_arg
 syntax keyword cppSTLfunction va_copy
 syntax keyword cppSTLfunction va_end
@@ -501,12 +504,18 @@ syntax keyword cppSTLnamespace rel_ops
 syntax keyword cppSTLnamespace std
 syntax keyword cppSTLtype allocator
 syntax keyword cppSTLtype auto_ptr
+syntax keyword cppSTLtype basic_filebuf
 syntax keyword cppSTLtype basic_fstream
 syntax keyword cppSTLtype basic_ifstream
+syntax keyword cppSTLtype basic_iostream
+syntax keyword cppSTLtype basic_istream
 syntax keyword cppSTLtype basic_istringstream
 syntax keyword cppSTLtype basic_ofstream
+syntax keyword cppSTLtype basic_ostream
 syntax keyword cppSTLtype basic_ostringstream
+syntax keyword cppSTLtype basic_streambuf
 syntax keyword cppSTLtype basic_string
+syntax keyword cppSTLtype basic_stringbuf
 syntax keyword cppSTLtype basic_stringstream
 syntax keyword cppSTLtype binary_compose
 syntax keyword cppSTLtype binder1st
@@ -535,7 +544,10 @@ syntax keyword cppSTLtype ifstream
 syntax keyword cppSTLtype imaxdiv_t
 syntax keyword cppSTLtype indirect_array
 syntax keyword cppSTLtype int_type
+syntax keyword cppSTLtype ios_base
+syntax keyword cppSTLtype istream
 syntax keyword cppSTLtype istringstream
+syntax keyword cppSTLtype istrstream
 syntax keyword cppSTLtype iterator_traits
 syntax keyword cppSTLtype key_compare
 syntax keyword cppSTLtype key_type
@@ -556,6 +568,7 @@ syntax keyword cppSTLtype off_type
 syntax keyword cppSTLtype ofstream
 syntax keyword cppSTLtype ostream
 syntax keyword cppSTLtype ostringstream
+syntax keyword cppSTLtype ostrstream
 syntax keyword cppSTLtype pair
 syntax keyword cppSTLtype pointer
 syntax keyword cppSTLtype pointer_to_binary_function
@@ -575,6 +588,8 @@ syntax keyword cppSTLtype stream
 syntax keyword cppSTLtype string
 syntax keyword cppSTLtype stringbuf
 syntax keyword cppSTLtype stringstream
+syntax keyword cppSTLtype strstream
+syntax keyword cppSTLtype strstreambuf
 syntax keyword cppSTLtype temporary_buffer
 syntax keyword cppSTLtype test_type
 syntax keyword cppSTLtype time_t
@@ -591,8 +606,10 @@ syntax keyword cppSTLtype value_type
 syntax keyword cppSTLtype vector
 syntax keyword cppSTLtype wfstream
 syntax keyword cppSTLtype wifstream
+syntax keyword cppSTLtype wistream
 syntax keyword cppSTLtype wistringstream
 syntax keyword cppSTLtype wofstream
+syntax keyword cppSTLtype wostream
 syntax keyword cppSTLtype wostringstream
 syntax keyword cppSTLtype wstring
 syntax keyword cppSTLtype wstringbuf
