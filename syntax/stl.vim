@@ -276,7 +276,7 @@ syntax keyword cppSTLfunction norm
 syntax keyword cppSTLfunction not1
 syntax keyword cppSTLfunction not2
 syntax keyword cppSTLfunction nth_element
-syntax keyword cppSTLfunction numeric_limits
+syntax keyword cppSTLtype numeric_limits
 syntax keyword cppSTLfunction open
 syntax keyword cppSTLfunction partial_sort
 syntax keyword cppSTLfunction partial_sort_copy
@@ -545,6 +545,7 @@ syntax keyword cppSTLtype imaxdiv_t
 syntax keyword cppSTLtype indirect_array
 syntax keyword cppSTLtype int_type
 syntax keyword cppSTLtype ios_base
+syntax keyword cppSTLtype iostream
 syntax keyword cppSTLtype istream
 syntax keyword cppSTLtype istringstream
 syntax keyword cppSTLtype istrstream
@@ -585,6 +586,7 @@ syntax keyword cppSTLtype size_type
 syntax keyword cppSTLtype slice_array
 syntax keyword cppSTLtype stack
 syntax keyword cppSTLtype stream
+syntax keyword cppSTLtype streambuf
 syntax keyword cppSTLtype string
 syntax keyword cppSTLtype stringbuf
 syntax keyword cppSTLtype stringstream
@@ -604,13 +606,16 @@ syntax keyword cppSTLtype valarray
 syntax keyword cppSTLtype value_compare
 syntax keyword cppSTLtype value_type
 syntax keyword cppSTLtype vector
+syntax keyword cppSTLtype wfilebuf
 syntax keyword cppSTLtype wfstream
 syntax keyword cppSTLtype wifstream
+syntax keyword cppSTLtype wiostream
 syntax keyword cppSTLtype wistream
 syntax keyword cppSTLtype wistringstream
 syntax keyword cppSTLtype wofstream
 syntax keyword cppSTLtype wostream
 syntax keyword cppSTLtype wostringstream
+syntax keyword cppSTLtype wstreambuf
 syntax keyword cppSTLtype wstring
 syntax keyword cppSTLtype wstringbuf
 syntax keyword cppSTLtype wstringstream
