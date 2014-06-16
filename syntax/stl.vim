@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:	C++ STL
 " Maintainer:	Mizuchi <ytj000@gmail.com>
-" Last Change:	16 Oct 2013
+" Last Change:	12 May 2014
 "
 " This script is aimed at making STL (and boost) user has the most readable
 " highlight. Not just highlight all STL functions and types. So some syntax
@@ -489,6 +489,7 @@ syntax keyword cppSTLiterator insert_iterator
 syntax keyword cppSTLiterator istreambuf_iterator
 syntax keyword cppSTLiterator istream_iterator
 syntax keyword cppSTLiterator iterator
+syntax keyword cppSTLiterator ostreambuf_iterator
 syntax keyword cppSTLiterator ostream_iterator
 syntax keyword cppSTLiterator output_iterator
 syntax keyword cppSTLiterator random_access_iterator
@@ -701,6 +702,7 @@ syntax keyword cppSTLconstant WCHAR_MAX
 if !exists("cpp_no_cpp11")
     syntax keyword cppSTLtype nullptr_t max_align_t
     syntax keyword cppSTLtype type_index
+    syntax keyword cppSTLtype initializer_list
 
     " type_traits
     syntax keyword cppSTLtype is_void
